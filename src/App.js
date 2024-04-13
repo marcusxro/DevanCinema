@@ -33,6 +33,7 @@ function App() {
          <Route path='/TopRated' element={<TopRated />} />
          <Route path='/Genre' element={<Genres/>} />
          <Route path='/About' element={<Contact/>} />
+         <Route path='/*' element={<Navigate to="/" />} />
       </Routes>
     </div>
   </Router>
