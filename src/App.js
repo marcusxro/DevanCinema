@@ -17,7 +17,7 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <Router basename='/DevanCinema'>
+    <Router>
     <div className="App">
       <Routes>
         <Route path='/' element={<Home />} />
