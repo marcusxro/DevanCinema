@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+  font-family: "Lexend", sans-serif;
+}
+
+
+.Home {
+  background-color: #221F1F;
+  height: 100%;
+}
+
+
+.Headers {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  padding-inline: 3%;
+  height: 80px;
+  align-items: center;
+  gap: 3%;
+  position: sticky;
+  top: 0;
+  background-color: #221F1F;
+  box-shadow: 0px 1px 12px 0px #E50914;
+  -webkit-box-shadow: 0px 1px 12px 0px #E50914;
+  -moz-box-shadow: 0px 1px 12px 0px #E50914;
+  z-index: 5;
+}
+
+.Headers .Logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(1rem, 5vw, 2rem);
+  font-weight: bold;
+  line-height: 60%;
+}
+
+.Headers .Logo span:nth-child(2) {
+  color: #E50914;
+}
+
+.searchContent input {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  width: 80%;
+  border-radius: 20px;
+}
+
+.inputCon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.close {
+  height: 100%;
+  color: #E50914;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 5vw, 2rem);
+}
+
+.lastBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.lines {
+  background-color: #E50914;
+  width: 24px;
+  height: 2px;
+}
+
+.popUp {
+  position: fixed;
+  top: 9%;
+  right: -300px;
+  background-color: #221F1F;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border: 1px solid #E50914;
+}
+.popUpBtn {
+  text-align: center;
+}
+@media only screen and (max-width: 840px) {
+  .menu {
+    display: flex;
+  }
+
+  .Headers {
+    justify-content: space-between;
+  }
+
+  .firstLeftBtn {
+    display: none;
+  }
+
+  .firstRightBtn {
+    display: none;
+  }
+}
+
+.HomeContent {
+  background-color: #221F1F;
+  height: auto;
+}
+
+.FirstIndexMovie {
+  background-color: #221F1F;
+  height: 80vh;
+  display: flex;
+  justify-content: space-evenly;
+  padding-inline: 5%;
+  color: #E50914;
+  position: relative;
+  align-items: center;
+  padding: 10px;
+}
+
+.absoIMg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+}
+.absoIMg img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  filter: blur(5px);
+}
+.FirstIndexInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  z-index: 2;
+  color: #E50914;
+}
+
+.FirstIndexMovie .FirstImg {
+  height: 80%;
+  width: 100%;
+  max-width: 400px;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.firstIndexGenre {
+  display: flex;
+  gap: 5px;
+}
+.genreItem {
+  background-color: white;
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+.FirstIndexMovie .FirstImg img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.FirstIndexInfo {
+  padding: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+@media only screen and (max-width: 840px) {
+  .FirstIndexMovie {
+    flex-direction: column;
+    align-items: center;
+  }
+  .FirstIndexInfo {
+    align-items: center;
+  }
+}
+
+.FirstIndexInfo .firstIndexTitle {
+  color: white;
+  font-weight: bold;
+  font-size: clamp(1rem, 5vw, 4rem);
+  margin-bottom: 20px;
+}
+
+.FirstIndexInfo .firstIndexDesc {
+  color: white;
+}
+
+.FirstIndexInfo .firstIndexPlay {
+  padding: 5px 20px;
+  background-color: #E50914;
+  color: #221F1F;
+  border-radius: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.popularCon {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+  padding: 10px;
+  height: 130vh;
+}
+
+
+.popularMovies {
+  width: 100%;
+  height: 100%;
+  transition: transform 150ms;
+}
+.popularMovies:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  height: 100%;
+  .popularInfo {
+    background-color: #E50914;
+    border-radius: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 10px;
+    z-index: 2;
+  }
+}
+
+
+.popularMoviesImg {
+  height: 90%;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.popularMoviesImg img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+@media only screen and (max-width: 1470px) {
+  .popularCon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 10px;
+    height: auto;
+  }
+  .popularMoviesImg {
+    height: 80%;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .popularCon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 10px;
+    height: auto;
+  }
+  
+}
+@media only screen and (max-width: 700px) {
+  .popularCon {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 10px;
+    height: auto;
+  }
+  
+}
+
+.popularInfo {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 10px;
+}
+.popularItemCon {
+  padding: 20px;
+}
+
+.popularMoviesDate span {
+  color: #E50914;
+}
+.popularMoviesTitle {
+  font-weight: bold;
+}
+
+.popularText {
+  font-size: clamp(1rem, 5vw, 2rem);
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+}
+
+.moreBtn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.moreBtn button {
+  all: unset;
+  padding: 8px 17px;
+  background-color: #E50914;
+  color: #221F1F;
+  border-radius: 10px;
+}
+
+
+.popularPage, .Animation, .Adventure, .Crime, .Science{
+  background-color: #221F1F;
+  height: auto;
+}
+
+.popularPage .popularCon {
+  height: auto;
+}
+
+.tvSer {
+  background-color: #221F1F;
+}
+
+.tvSer .popularCon {
+  height: auto;
+}
+
+.Animation .popularCon {
+  height: auto;
+}
+
+.Adventure .popularCon {
+  height: auto;
+}
+.Crime .popularCon {
+  height: auto;
+}
+
+.Science .popularCon {
+  height: auto;
+}
+
+html {
+  background-color: #221F1F;
+}
+
+.moviePage {
+  background-color: #221F1F;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 5%;
+  padding-top: 20px;
+  position: relative;
+}
+
+iframe {
+  height: 600px;
+  border: none;
+  width: 100%;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.movieInfoContent {
+  margin-top: 20px;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+.movieDetailsItem {
+  z-index: 2;
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-color: #221F1F;
+  border-radius: 20px;
+  padding: 20px;
+}
+.moviePosterItem {
+  height: 100%;
+  max-height: 700px;
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.moviePosterItem img {
+  object-fit: cover;
+  width: 100%;
+  z-index: 2;
+}
+
+.absoImgs {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+.absoImgs img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  filter: blur(5px);
+}
+
+h2 {
+  display: flex;
+}
+
+.moviePage .movieTitle {
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  font-weight: bold;
+}
+.moviePage .movieTitle span{
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  font-weight: bold;
+  color: #E50914;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* This ensures the items wrap to the next line if there's not enough space */
+}
+
+li {
+  background-color: #E50914;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+  max-width: 200px;
+}
+
+
+.urlChanges {
+  display: flex;
+  width: 100%;
+  margin-top: 50px;
+  gap: 10px;
+}
+
+.urlChanges button {
+  width: 100%;
+  background-color: #E50914;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+}
+.releaseDate span {
+  color: #E50914;
+}
+.tagLine {
+  color: #ccc;
+  font-style: oblique;
+}
+
+
+.imdb {
+  margin-top: 10px;
+  color: green;
+}
+
+.notWorking {
+  margin-top: 10px;
+}
+
+.notWorking span {
+  text-decoration: underline;
+  color: lightblue;
+  cursor: pointer;
+}
+
+.firstRightBtn, .firstLeftBtn {
+  cursor: pointer;
+  text-align: center;
+}
+
+.popularText span {
+  color: #E50914;
+}
+
+
+
+.Loading {
+  height: calc(100vh - 80px);
+  color: #E50914;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.genrePicker {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  height: auto;
+  margin-top: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.genrePicker button {
+  background-color: #E50914;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.genrePicker .activate {
+  background-color: blue;
+}
+.Contact {
+  height: 100vh;
+  overflow: hidden;
+}
+.contactCon {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('./Imgs/movies-1.jpg');
+  text-align: center;
+  padding: 50px;
+  color: #fff;
+}
+
+.contactCon h1 {
+  font-size: clamp(1rem, 5vw, 1.5rem);
+}
+.contactCon h1 span {
+  color: #E50914;
+}
+
+.contactCon button {
+  padding: 10px 20px;
+  background-color: #E50914;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+.contentForAbout {
+  background-color: #221F1F;
+  padding: 20px;
+  box-shadow: 0px 0px 12px 0px #E50914;
+-webkit-box-shadow: 0px 0px 12px 0px #E50914;
+border-radius: 20px;
+-moz-box-shadow: 0px 0px 12px 0px #E50914;
+width: 100%;
+margin: 10px;
+max-width: 800px;
+}
+
+.socialCon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+.socialCon .socialItem{
+  font-size: 20px;
+  background-color: #E50914;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialTexts {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
